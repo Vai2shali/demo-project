@@ -1,0 +1,37 @@
+Angular Services :
+
+Service is a basic building block of angular.
+It used to sepearate the UI logic from business logic. i.e. used to sepearate UI and backend.
+It is also used for inter component communication.
+Service is a class file with having methods and properties.
+
+Dependency Injection :
+	It is a pattern of class coding in which class recieves its dependencies externally rather than creating itself.
+	
+	to fetch the data from backend :
+	
+	compt.ts ===> Service.ts ===> http client ===> backend ==> backend retuturn response in terms of observable in the service via http ==>
+	comp.ts and subscribe the data convert observable to normal format of data ==> comp.html to print the data. 
+
+
+	
+Angular HTTP Client :
+
+	HTTP Client is an built in service used to communicate with backend.
+	It is used to send the http request and get the response from backend.
+	We will get response in terms of observable.
+	We can handle error with the help of http client.
+	We can cancel the http request.
+	Http provides below methods:
+	
+	get: used to get the data from backend.
+	post: used to send or recieve the data from backend.
+	put: used to update the data.
+	delete: used to delete the data.
+	
+	post: All above method's operation can be handled with the help of post method.
+	
+	To call the API we should know:
+	1. Type of the method like get, post, put, delete, patch.
+	2. url for the API.
+	3. Request body.

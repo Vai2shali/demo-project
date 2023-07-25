@@ -1,0 +1,52 @@
+ <h5>Service</h5>
+ <div class="card">
+  <h5>Custom Sort</h5>
+   <p-table dataKey="id" [value]="products" [globalFilterFields]="['name','products.title','products.category','products.description','products.price']" [tableStyle]="{'min-width': '60rem'}">
+
+      <ng-template pTemplate="header">
+          <tr>
+              <th pSortableColumn="id" style="width:20%">Id <p-sortIcon field="id"></p-sortIcon></th>
+              <th pSortableColumn="title" style="width:20%">Name <p-sortIcon field="title"></p-sortIcon></th>
+              <th pSortableColumn="category" style="width:20%">Category <p-sortIcon field="category"></p-sortIcon></th>
+              <th pSortableColumn="description" style="width:20%">Description <p-sortIcon field="description"></p-sortIcon></th>
+              <th pSortableColumn="price" style="width:20%">Price <p-sortIcon field="price"></p-sortIcon></th>
+          </tr>
+       </ng-template> 
+        
+         
+       <ng-template pTemplate="body" let-products>
+          <tr>
+              <td>{{products.id}}</td>
+              <td>{{products.title}}</td>
+              <td>{{products.category}}</td>
+              <td>{{products.description}}</td>
+              <td>{{products.price  }}</td>
+          </tr>
+      </ng-template>
+  </p-table>
+</div>        
+<!--   
+  <table class="table table-responsive">
+  <tr>
+    <th pSortableColumn="code">Code <p-sortIcon field="id"></p-sortIcon></th>
+    <th  pSortableColumn="code">Name <p-sortIcon field="tittle"></p-sortIcon></th>
+    <th  pSortableColumn="code">Category <p-sortIcon field="category"></p-sortIcon></th>
+    <th  pSortableColumn="code">Quantity <p-sortIcon field="description"></p-sortIcon></th>
+    <th  pSortableColumn="code">Price <p-sortIcon field="price"></p-sortIcon></th>
+ 
+    
+ 
+  </tr>
+   
+  <tr *ngFor="let pr of products">
+    <td>{{pr.code}}</td>
+    <td>  {{pr.name}} </td>
+    <td>{{pr.category}}</td>
+    <td>{{pr.quantity}}</td>
+    <td>{{pr.price}}</td> -->
+
+   
+
+  <!-- </tr>
+ </table> 
+   -->
